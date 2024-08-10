@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-
-const Admin = (title) => {
+import Login from '../pages/Login'
+const Admin = () => {
   return (
     <>
-      <Navbar title="OEP Admin Dashboard"/> 
+      <Navbar navMessage="OEP Admin Dashboard" type="Admin"/> 
+      <Login type="Admin"/>
+      
     </>
   )
 }

@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 const Teacher = () => {
   return (
     <>
-      <Navbar title="OEP Teacher Dashboard"/>
+      <Navbar navMessage="OEP Teacher Dashboard" type="Teacher"/>
     </>
   )
 }

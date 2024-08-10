@@ -3,10 +3,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 
-const Dashboard = (navbar) => {
+const Dashboard = (user) => {
   return (
     <>
-    <Navbar title="Online Examination Portal"/>
+      {/* <Navbar navMessage="Online Examination Portal" /> */}
+      <Navbar/>
       <div className="container mt-5">
         <div className="row justify-content-center user-select-none">
           <div className="col-md-10 ">
@@ -19,7 +20,7 @@ const Dashboard = (navbar) => {
               <div className="card-body pe-auto">
                 <div className="row">
                   <div className="col-md-4 mb-3" >
-                    <Link to="./Admin" className='text-decoration-none '>
+                    <Link to="./Login" className='text-decoration-none' onClick={user.type}>
                       <div className="card py-3 h-100 custom-hover">
                         <div className="card-title h6 ">Admin</div>
                         <div className="card-text">Manage Teacher & Students</div>
@@ -27,7 +28,7 @@ const Dashboard = (navbar) => {
                     </Link>
                   </div>
                   <div className="col-md-4 mb-3">
-                    <Link to="./Teacher" className='text-decoration-none '>
+                    <Link to="./Login" className='text-decoration-none '>
                       <div className="card  py-3  h-100 custom-hover">
                         <div className="card-title h6 ">Teacher</div>
                         <div className="card-text">Manage Question, Exam Schedule, Student Result, can accecss personal dashboard </div>
@@ -35,7 +36,7 @@ const Dashboard = (navbar) => {
                     </Link>
                   </div>
                   <div className="col-md-4 mb-3">
-                    <Link to="./Student" className='text-decoration-none'>
+                    <Link to="./Login" className='text-decoration-none'>
                       <div className="card  py-3 h-100 custom-hover" >
                         <div className="card-title h6 ">Student</div>
                         <div className="card-text">Access Personal Dashboard</div>
